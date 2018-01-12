@@ -4,7 +4,8 @@ var Schema = mongoose.Schema;
 var yogaSchema = new Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
-  email: String, require: true },
+  email: { type: String, require: true },
+  password: { type: String, require: true },
   date: { type: Date, default: Date.now }
 });
 

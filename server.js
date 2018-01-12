@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 //look into static builds
 // Serve up static assets
-app.use(express.static("client/build"));
+app.use(express.static("public"));
 // Add routes, both API and view
 app.use(routes);
 // Set up promises with mongoose
