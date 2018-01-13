@@ -1,9 +1,13 @@
 var express = require("express");
+var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var routes = require("./routes");
 var app = express();
 var PORT = process.env.PORT || 3001;
+
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.set("view engine", "handlebars");
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: false }));
