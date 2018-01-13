@@ -1,12 +1,10 @@
-var path = require("path");
 var router = require("express").Router();
 var apiRoutes = require("./api");
+var viewRoutes = require("./view");
 
 router.use("/api", apiRoutes);
-
-//if no API routes hit throw this. This will need work
-router.use(function(req, res){
-	res.render("index");
-});
+router.use("/", viewRoutes);
 
 module.exports = router;
+
+

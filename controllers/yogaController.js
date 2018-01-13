@@ -1,6 +1,7 @@
 const db = require("../models");
 
 // Defining methods for the yogaController
+
 module.exports = {
   create: function(req, res) {
     db.Yoga

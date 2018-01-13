@@ -1,7 +1,6 @@
-const router = require("express").Router();
-const yogaRoutes = require("./yoga");
+var router = require("express").Router();
+var yogaApi = require("./yogaApi");
 
-// yoga routes
-router.use("/yoga", yogaRoutes);
+router.use("/yogaApi", yogaApi);
 
 module.exports = router;
