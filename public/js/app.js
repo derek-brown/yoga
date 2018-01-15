@@ -13,4 +13,6 @@ $(document).on("click", "#submit", function(e) {
 	function thanks(){
 		alert("Thank you for submitting, "+$("#firstName").val()+"!");
 	}
+
+	$.get("/api/yoga", data => console.log(data));
 });
