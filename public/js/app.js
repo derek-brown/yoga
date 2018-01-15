@@ -12,10 +12,5 @@ $(document).on("click", "#submit", function(e) {
 
 	function thanks(){
 		alert("Thank you for submitting, "+$("#firstName").val()+"!");
-		$.get("/api/yoga", function(user){
-			for(var i=0; i<user.length; i++){
-				$("#build").append("Introducting: "+user[i].firstName+"!");
-			}
-		})
 	}
 });
