@@ -11,7 +11,7 @@ module.exports = {
   },
   read: function(req, res){
   	db.Yoga
-  		.findOne(req.query)
+  		.find(req.query)
   		.then(dbYoga => res.json(dbYoga))
   		.catch(err => res.status(422).json(err));
   }

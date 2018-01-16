@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+ 
 $(document).on("click", "#submit", function(e) {
 	e.preventDefault();
 	$.post("/api/yoga", {
@@ -12,7 +12,12 @@ $(document).on("click", "#submit", function(e) {
 
 	function thanks(){
 		alert("Thank you for submitting, "+$("#firstName").val()+"!");
+		$.get("/api/yoga", function(data) {
+			for(var i=0; i<data.length; i++){
+				$("#build").append("<p>Thank you, "+data[i].firstName+". </p>");
+			}
+		});	
 	}
 
-	$.get("/api/yoga", data => console.log(data));
+	
 });
