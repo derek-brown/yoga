@@ -10,4 +10,6 @@ var scrape = function(){
 								.children(".post-snippet");
 								console.log(post);
 	});
-}
+};
+
+module.exports = scrape;
