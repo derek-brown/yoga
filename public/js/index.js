@@ -1,4 +1,7 @@
 $(document).ready(function(){
-	$("#build").append("<p>Hello world!</p>");
+	console.log("Hello world!");
+	$.get("/api/scrape").then(function(data){
+			console.log(data);
+	});
 });
 

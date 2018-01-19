@@ -1,6 +1,6 @@
 var router = require("express").Router();
-var scrape = require("../../scripts/scrape");
+var scrapeController = require("../../controllers/scrapeController");
 
-router.get("/", scrape);
+router.get("/", scrapeController.scrape);
 
 module.exports = router;
