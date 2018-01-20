@@ -26,9 +26,9 @@ var scrape = function(){
 										.text()
 										.trim();
 
-		if (head && sum && url) {
-        var headNeat = head.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
-        var sumNeat = sum.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
+		if (title && summary && url) {
+        var title = title.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
+        var summary = summary.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
 
        
        var dataToAdd = {
