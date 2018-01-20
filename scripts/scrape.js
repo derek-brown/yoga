@@ -26,14 +26,19 @@ var scrape = function(){
 										.text()
 										.trim();
 
-		var dataToAdd = {
-			title: title,
-			summary: summary,
-			url: url
-		};
+		if (head && sum && url) {
+        var headNeat = head.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
+        var sumNeat = sum.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
+
+       
+       var dataToAdd = {
+          title: titleClean,
+          summary: summaryClean,
+          url: url
+        };
 
 		postArray.push(dataToAdd);
-
+		}
 		});
 		return postArray;
 	});

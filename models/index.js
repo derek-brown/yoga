@@ -1,3 +1,4 @@
 module.exports = {
-  Yoga: require("./yoga")
+  Yoga: require("./yoga"),
+  Post: require("./Post")
 };
