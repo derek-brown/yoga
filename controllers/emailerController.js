@@ -1,5 +1,7 @@
-var emailer = function(){
-	return console.log("Hello world!");
-}
-
-module.exports = emailer;
+module.exports = {
+	emailer: function(req, res){
+			res.json({
+				message: "hello!"
+			});
+		}
+};
