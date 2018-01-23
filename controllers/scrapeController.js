@@ -1,13 +1,14 @@
-var db = require("../models/Post");
+const db = require("../models");
 var scrape = require("../scripts/scrape");
 
 module.exports = {
 	scrape: function(req, res){
 		return scrape()
 		.then(function(data){
-			return db.Post.create(data);
+			res.json(data);
 		})
 		.catch(function(err){
+			console.log(err);
 			res.json({
 				message: "Scrape Complete!!"
 			});

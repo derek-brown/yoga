@@ -1,8 +1,17 @@
 $(document).ready(function(){
-	// var blogAPI = "https://www.googleapis.com/blogger/v3/blogs/5708692576095399348?key=AIzaSyAYY_7S2suhjQ9Mh3xGKQLFv9t0BT6Yl38";
-	// $.get(blogAPI, function(data){
-	// 	console.log(data.posts.selfLink);
-	// });
+$("#submit").on("click", function(e){
+	e.preventDefault();
 
+$.post("/api/yoga", {
+ 	firstName: $("#firstName").val().trim(),
+ 	lastName: $("#lastName").val().trim(),
+ 	email: $("#email").val().trim(),
+ 	phoneNum: $("#phoneNum").val().trim(),
+ }, thanks());
 
+});
+
+	function thanks(){
+		alert("Thank you for submitting, "+$("#firstName").val()+"!");
+	}
 });

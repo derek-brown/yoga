@@ -21,8 +21,8 @@ var scrape = function(){
 									.attr("href");
 
 			var summary = $(this)
-										.children("snippet-container")
-										.children("snippet-item")
+										.children(".post-snippet")
+										.children(".snippet-item")
 										.text()
 										.trim();
 
@@ -30,10 +30,9 @@ var scrape = function(){
         var title = title.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
         var summary = summary.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
 
-       
        var dataToAdd = {
-          title: titleClean,
-          summary: summaryClean,
+          title: title,
+          summary: summary,
           url: url
         };
 

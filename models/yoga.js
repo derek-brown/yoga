@@ -5,7 +5,7 @@ var yogaSchema = new Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
   email: { type: String, require: true },
-  password: { type: String, require: true },
+  phoneNum: { type: String, require: true },
   date: { type: Date, default: Date.now }
 });
 
