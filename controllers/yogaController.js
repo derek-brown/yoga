@@ -14,5 +14,11 @@ module.exports = {
   		.find(req.query)
   		.then(dbYoga => res.json(dbYoga))
   		.catch(err => res.status(422).json(err));
+  },
+  findOne: function(req, res){
+    db.Yoga
+    .findOne(req.query)
+    .then(dbYoga => res.json(dbYoga))
+    .catch(err => res.status(422).json(err));
   }
 };

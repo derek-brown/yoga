@@ -6,6 +6,7 @@ var yogaSchema = new Schema({
   lastName: { type: String, required: true },
   email: { type: String, require: true },
   phoneNum: { type: String, require: true },
+  classID: { type: Array },
   date: { type: Date, default: Date.now }
 });
 
