@@ -10,8 +10,8 @@ router.get("/signUp", function(req, res){
 	res.render("signUp");
 });
 
-router.get("/classSignUp", function(req, res){
-	res.render("classSignUp");
+router.get("/adminClass", function(req, res){
+	res.render("adminClass");
 });
 
 router.get("/classes", function(req, res){

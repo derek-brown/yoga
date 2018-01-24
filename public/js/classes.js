@@ -23,7 +23,6 @@ $(document).ready(function(){
 			var classID = $(this).attr("data");
 			sessionStorage.setItem("class_id", classID);
 			console.log(sessionStorage);
-			// $.post("/api/yoga")
 		window.location.href = "/signUp"
 		});
  	});
