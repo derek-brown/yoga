@@ -13,11 +13,4 @@ $.post("/api/class", {
 	function thanks(){
 		alert("Class submited.");
 	}
-   // $("<div>").addClass("panel panel-default")
-   // .html(`<div class="panel-heading">
-			// 			<h3 class="panel-title text-center"></h3>
-   // 				</div>
-   // 				<div class="panel-body">
-   					
-   // 				</div>`).appendTo("#build");
 });
