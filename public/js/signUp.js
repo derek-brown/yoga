@@ -4,16 +4,17 @@ $(document).ready(function(){
 	var value = false;
 
 	$.get("/api/class").then(function(data){
-		for(var i=0; i<data.length; i++){
-			if(data[i]._id===sessionStorage.class_id){
-				$("#welcome").html(data[i].classType+", Sign Up");
-				signUpReady();
-			}
-			else{
-				alert("Go back and choose a class!");
-				window.location.href = "/classes";
-			}
-		};
+		if(!sessionStorage.class_id){
+			alert("Please go back and select a class!");
+			window.location.href = "/classes";
+		}else{
+			for(var i=0; i<data.length; i++){
+				if(data[i]._id===sessionStorage.class_id){
+					$("#welcome").html(data[i].classType+", Sign Up");
+					signUpReady();
+				}
+			};
+		}
 	});
 
 function signUpReady(){

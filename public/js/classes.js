@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	console.log(sessionStorage);
 	$.get("/api/class").then(function(data){
 		console.log(data);
 	if(data.length===0){
@@ -18,12 +18,21 @@ $(document).ready(function(){
 		   				</div>`).appendTo("#build");
 		};
  	}
-	 	$("#submit").on("click", function(f){
-	 		f.preventDefault();
-			var classID = $(this).attr("data");
-			sessionStorage.setItem("class_id", classID);
-			console.log(sessionStorage);
-		window.location.href = "/signUp"
-		});
+	 	$(document).on("click", "#submit", handleClasses);
+
+
+	 	function handleClasses(){
+	 		var classID = $(this).attr("data");
+			console.log(classID);
+			if(sessionStorage.class_id){
+				sessionStorage.class_id = classID;
+				console.log(sessionStorage);
+				window.location.href = "/signUp"
+			}else{
+				sessionStorage.setItem("class_id", classID);
+				console.log(sessionStorage);
+				window.location.href = "/signUp"
+			}	
+		}
  	});
 });
